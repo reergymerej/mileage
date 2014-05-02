@@ -6,12 +6,13 @@ html(ng-app='mileage')
   body
     ul
         li
-            a(href='/') Home
+            a(href='#/') Home
         li
-            a(href='add') Add Entry
+            a(href='#/add') Add Entry
         li
-            a(href='chart') Chart
-    block content
+            a(href='#/chart') Chart
+    div(ng-view)
+    
     //- script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js')
     script(src='/bower_components/angular/angular.js')
     script(src='/bower_components/angular-route/angular-route.js')

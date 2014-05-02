@@ -33,9 +33,9 @@ app.use('/bower_components', express.static(path.join(__dirname, '/bower_compone
 app.use(app.router);
 
 // Watch for requests for html instead of jade templates.
-app.get('/html/*', function (req, res) {
+app.get('/templates/*', function (req, res) {
     var path = req.params[0];
-    res.render('/html/' + path);
+    res.render('/templates/' + path);
 });
 
 app.get('/', routes.index);
