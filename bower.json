@@ -1,0 +1,30 @@
+{
+  "name": "mileage",
+  "version": "0.0.1",
+  "homepage": "https://github.com/reergymerej/mileage",
+  "authors": [
+    "Jeremy Greer <jeremygreer@reergymerej.com>"
+  ],
+  "description": "A little app to log gas mileage",
+  "main": "app.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "jgreer",
+    "jeremy greer",
+    "reergymerej"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.2.x"
+  }
+}
