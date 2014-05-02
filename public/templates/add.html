@@ -1,1 +1,32 @@
-This is the add page.
+<section ng-controller="AddCtrl">
+    <h2>Add</h2>
+    <p>Use this page to add a new gas receipt.</p>
+    <form ng-submit="submit()">
+        <div>
+            <label>Date</label>
+            <input ng-model="receipt.date" placeholder="Date" />
+        </div>
+
+        <div>
+            <label>Miles</label>
+            <input ng-model="receipt.miles" placeholder="Miles" />
+        </div>
+
+        <div>
+            <label>Gallons</label>
+            <input ng-model="receipt.gallons" placeholder="Gallons" />
+        </div>
+
+        <div>
+            <label>Cost</label>
+            <input ng-model="receipt.cost" placeholder="Cost" />
+        </div>
+
+        <div>
+            <label>$/Gallon</label>
+            <input ng-model="receipt.price" placeholder="$/Gallon" />
+        </div>
+
+        <button>submit</button>
+    </form>
+</section>
