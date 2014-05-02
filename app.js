@@ -15,6 +15,11 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+// Produce readable markup.
+app.configure('development', function () {
+    app.locals.pretty = true;
+});
+
 app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -22,6 +27,12 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
+
+// Watch for requests for html instead of jade templates.
+app.get('/html/*', function (req, res) {
+    var path = req.params[0];
+    res.render('/html/' + path);
+});
 
 app.get('/', routes.index);
 app.get('/users', users.list);
